@@ -10,11 +10,20 @@
 </head>
 <body>
     <div class="login-page__content">
-        <button class="modal-btn" id="myBtn">Open Modal</button>
+        <button class="modal-btn" id="myBtn">Register</button>
         <div id="myModal" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <p>Some text in the Modal..</p>
+                <div class="modal-title">
+                    <h5>Login to Demo Shop</h5>
+                </div>
+                <div class="register-form">
+                    <form class="form">
+                        <input class="form-input" type="text" minlength="4" maxlength="12" placeholder="Login" required>
+                        <input class="form-input" type="password" minlength="4" maxlength="12" placeholder="Password" required>
+                        <button class="btn-submit">Submit</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

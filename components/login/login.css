@@ -12,13 +12,58 @@
     background-color: #d3d3d3;
 }
 
-.modal-btn {
-    padding: 5px;
-}
-
 .modal-btn:hover {
     cursor: pointer;
 }
+
+.modal-title {
+    text-align: center;
+    background-color: #fff;
+    padding: 10px 0;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0 20px;
+}
+
+.form-input {
+    width: 50%;
+    padding: 10px 10px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.form-input:focus {
+    outline: none;
+}
+
+.form-input:invalid {
+    border: 2px solid red;
+}
+
+.form-input:valid {
+    border: 2px solid #333;
+}
+
+.btn-submit, .modal-btn {
+    padding: 10px 20px;
+    background-color: #28a3a5;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.btn-submit:focus, .modal-btn:focus {
+    outline: none;
+}
+
+.btn-submit:hover, .modal-btn:hover {
+    cursor: pointer;
+}
+
+/*   Styles for pure Modal window   */
 
 .modal {
     display: none;
@@ -35,9 +80,8 @@
 
 .modal-content {
     position: relative;
-    background-color: #fefefe;
+    background-color: #E8E8E8;
     margin: 15% auto;
-    padding: 20px;
     border: 1px solid #888;
     width: 50%;
 }
@@ -59,6 +103,9 @@
 }
 
 @media only screen and (max-width: 1000px) {
+    .form-input {
+        width: 70%;
+    }
     .modal-content {
         width: 80%;
     }
