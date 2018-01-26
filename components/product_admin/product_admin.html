@@ -5,8 +5,8 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Product customer</title>
-    <link rel="stylesheet" href="product_customer.css">
+    <title>Product admin</title>
+    <link rel="stylesheet" href="product_admin.css">
 </head>
 <body>
 
@@ -39,9 +39,15 @@
                             <h3 class="product-name">Name of product</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur delectus impedit maiores non odit quod recusandae repellat sapiente ullam.</p>
                         </div>
+                        <div class="product-tools">
+                            <h4>You can also:</h4>
+                            <button id="add" class="buy-btn add">Add more</button>
+                            <button id="edit" class="buy-btn edit">Edit</button>
+                            <button id="del"  id=class="buy-btn del">Delete</button>
+                        </div>
                         <div class="buy-item">
                             <p class="item-price">$Price</p>
-                            <button class="btn">Buy</button>
+                            <button id="buy" class='buy-btn buy'>Buy</button>
                         </div>
                     </div>
                 </div>
@@ -50,12 +56,25 @@
     </div>
 </section>
 
+<div id="buy-modal" class="modal">
+    <!--<div class="modal-content">-->
+        <!--<span class="close">&times;</span>-->
+        <!--<div class="modal-title">-->
+            <!--<h3>Thank you!</h3>-->
+        <!--</div>-->
+        <!--<div>-->
+            <!--<p>You successfully purchased this item.</p>-->
+        <!--</div>-->
+    <!--</div>-->
+</div>
+
 <footer>
     <div class="container">
         <p class="footer-title">Demo Shop</p>
     </div>
 </footer>
 
+<script src="product_admin.js"></script>
 <script src="https://use.fontawesome.com/255c2dfaed.js"></script>
 </body>
 </html>
