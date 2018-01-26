@@ -1,0 +1,5 @@
+# IDE ignores
+.idea/
+
+.DS_STORE
+.DS_Store
