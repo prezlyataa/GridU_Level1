@@ -12,10 +12,6 @@
     background-color: #d3d3d3;
 }
 
-.modal-btn:hover {
-    cursor: pointer;
-}
-
 .modal-title {
     text-align: center;
     background-color: #fff;
