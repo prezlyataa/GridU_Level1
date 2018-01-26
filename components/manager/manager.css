@@ -1,0 +1,63 @@
+/*    Styles for Main layout   */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+header, footer {
+    background-color: #218688;
+    padding: 15px 0;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 25px;
+}
+
+.user {
+    display: flex;
+}
+
+.user-name {
+    margin-right: 10px;
+}
+
+.content {
+    min-height: 90vh;
+    background-color: #d3d3d3;
+}
+
+.footer-title {
+    text-align: center;
+}
+
+
+/*   Styles for manager page   */
+
+.analytics {
+    display: flex;
+}
+
+.analytics img {
+    width: 600px;
+    height: 100%;
+}
+
+
+
+@media only screen and (max-width: 1200px) {
+    .analytics {
+        flex-direction: column;
+        align-items: center;
+    }
+    .analytics img {
+        width: 90%;
+    }
+}
