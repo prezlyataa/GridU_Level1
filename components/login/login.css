@@ -44,18 +44,18 @@
     border: 2px solid #333;
 }
 
-.btn-submit, .modal-btn {
+.btn {
     padding: 10px 20px;
     background-color: #28a3a5;
     border-radius: 5px;
     color: #fff;
 }
 
-.btn-submit:focus, .modal-btn:focus {
+.btn:focus {
     outline: none;
 }
 
-.btn-submit:hover, .modal-btn:hover {
+.btn:hover {
     cursor: pointer;
 }
 
