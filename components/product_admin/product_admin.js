@@ -1,74 +1,103 @@
-/* Script for buy Modal window */
+const modal = document.getElementById('modal');
 
-// var modal = document.getElementById('buy-modal');
-//
-// var btn = document.getElementById("buy-btn");
-//
-// var span = document.getElementsByClassName("close")[0];
-//
-// btn.onclick = function() {
-//     modal.style.display = "block";
-// };
-//
-// span.onclick = function() {
-//     modal.style.display = "none";
-// };
-//
-//
-// window.onclick = function(event) {
-//     if (event.target == modal) {
-//         modal.style.display = "none";
-//     }
-// };
-
-/* Script for buy Modal window */
-
-var buy_modal = document.getElementById('buy-modal');
-
-var buy_btn = document.getElementById('buy-btn');
-
-var span = document.getElementsByClassName("close")[0];
-//
-// buy_btn.onclick = function() {
-//     buy_modal.style.display = "block";
-// };
-//
-// span.onclick = function() {
-//     buy_modal.style.display = "none";
-// };
-//
-// window.onclick = function(event) {
-//     if (event.target == buy_modal) {
-//         buy_modal.style.display = "none";
-//     }
-// };
-
-const content1 = {
-    data:'Hello'
-}
-window.onclick = function (e) {
-    if(e.target.nodeName="BUTTON" && e.target.classList.contains('buy-btn')){
-        console.log(e.target);
-
-        switch (e.target.id){
-            case 'buy':
-                buy_modal.style.display = "block";
-                console.log(e.target);
-                setConent(content1.data);
-                break;
-
-
-        }
-    }
+const modal_data = {
+    message: 'You successfully purchased this item'
 };
 
-function setConent(content) {
-    buy_modal.innerHTML = `<div class="modal-content">
+function Hide() {
+    span.onclick = function() {
+        modal.style.display = "none";
+    };
+}
+
+function Close() {
+    const span = document.getElementsByClassName("close")[0];
+    span.onclick = function() {
+        modal.style.display = "none";
+    };
+}
+
+function Buy(content) {
+    modal.innerHTML = `<div class="modal-content">
         <span class="close">&times;</span>
         <div class="modal-title">
             <h3>Thank you!</h3>
         </div>
         <div>
             <p>${content}</p>
-        </div>`
+        </div>`;
+    Close();
 }
+
+function Add() {
+    modal.innerHTML = `<div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-title">
+            <h3>Add more</h3>
+        </div>
+        <div>
+            <p>Add more</p>
+        </div>`;
+    Close();
+}
+
+function Edit() {
+    modal.innerHTML = `<div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-title">
+            <h3>Edit</h3>
+        </div>
+        <div>
+            <p>Edit</p>
+        </div>`;
+    Close();
+}
+
+function Delete() {
+    modal.innerHTML = `<div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-title">
+            <h3>Are you sure?</h3>
+        </div>
+        <div>
+            <p>Are you sure that you want delete this item?</p>
+        </div>
+        <button class="btn" onclick="modal.style.display = 'none';">Yes</button>
+        <button class="btn" onclick="modal.style.display = 'none'">No</button>`;
+    Close();
+}
+
+window.onclick = function (e) {
+    if(e.target.nodeName="BUTTON"
+            && e.target.classList.contains('buy')
+            || e.target.classList.contains('add')
+            || e.target.classList.contains('edit')
+            || e.target.classList.contains('del')
+    ) {
+        modal.style.display = "block";
+        switch (e.target.id){
+            case 'add':
+                Add();
+                Hide();
+                break;
+            case 'edit':
+                Edit();
+                Hide();
+                break;
+            case 'del':
+                Delete();
+                Hide();
+                break;
+            case 'buy':
+                Buy(modal_data.message);
+                Hide();
+                break;
+            default:
+                break;
+        }
+    }
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+};
+
