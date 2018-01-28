@@ -108,6 +108,31 @@ header, footer {
     cursor: pointer;
 }
 
+.modal-title {
+    text-align: center;
+}
+
+.modal-edit {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.edit-left-part, .edit-right-part {
+    width: 49%;
+}
+
+.edit-part-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-edit-input {
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
 @media only screen and (max-width: 900px) {
     .product {
         flex-direction: column;
@@ -166,6 +191,12 @@ header, footer {
     }
     .modal-content {
         width: 80%;
+    }
+    .modal-edit {
+        flex-direction: column;
+    }
+    .edit-left-part, .edit-right-part {
+        width: 100%;
     }
 }
 

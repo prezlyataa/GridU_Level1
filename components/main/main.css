@@ -155,6 +155,16 @@ header, footer {
     padding-top: 15px;
 }
 
+#amount {
+    border:0;
+    color:#f6931f;
+    font-weight:bold;
+}
+
+#slider-range {
+    margin-top: 15px;
+}
+
 .footer-title {
     text-align: center;
 }

@@ -4,15 +4,15 @@ const btn = document.getElementById("myBtn");
 
 const span = document.getElementsByClassName("close")[0];
 
-btn.onclick = function() {
+btn.onclick = () => {
     modal.style.display = "block";
 };
 
-span.onclick = function() {
+span.onclick = () => {
     modal.style.display = "none";
 };
 
-window.onclick = function(event) {
+window.onclick = (event) => {
     if (event.target == modal) {
         modal.style.display = "none";
     }
