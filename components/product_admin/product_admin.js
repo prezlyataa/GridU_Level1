@@ -4,20 +4,20 @@ const modal_data = {
     message: 'You successfully purchased this item'
 };
 
-function Hide() {
+Hide = () => {
     span.onclick = function() {
         modal.style.display = "none";
     };
-}
+};
 
-function Close() {
+Close = () => {
     const span = document.getElementsByClassName("close")[0];
     span.onclick = function() {
         modal.style.display = "none";
     };
-}
+};
 
-function Buy(content) {
+Buy = (content) => {
     modal.innerHTML = `<div class="modal-content">
         <span class="close">&times;</span>
         <div class="modal-title">
@@ -27,9 +27,9 @@ function Buy(content) {
             <p>${content}</p>
         </div>`;
     Close();
-}
+};
 
-function Add() {
+Add = () => {
     modal.innerHTML = `<div class="modal-content">
         <span class="close">&times;</span>
         <div class="modal-title">
@@ -39,9 +39,9 @@ function Add() {
             <p>Add more</p>
         </div>`;
     Close();
-}
+};
 
-function Edit() {
+Edit = () => {
     modal.innerHTML = `<div class="modal-content">
         <span class="close">&times;</span>
         <div class="modal-title">
@@ -51,9 +51,9 @@ function Edit() {
             <p>Edit</p>
         </div>`;
     Close();
-}
+};
 
-function Delete() {
+Delete = () => {
     modal.innerHTML = `<div class="modal-content">
         <span class="close">&times;</span>
         <div class="modal-title">
@@ -65,7 +65,7 @@ function Delete() {
         <button class="btn" onclick="modal.style.display = 'none';">Yes</button>
         <button class="btn" onclick="modal.style.display = 'none'">No</button>`;
     Close();
-}
+};
 
 window.onclick = function (e) {
     if(e.target.nodeName="BUTTON"
@@ -78,23 +78,20 @@ window.onclick = function (e) {
         switch (e.target.id){
             case 'add':
                 Add();
-                Hide();
                 break;
             case 'edit':
                 Edit();
-                Hide();
                 break;
             case 'del':
                 Delete();
-                Hide();
                 break;
             case 'buy':
                 Buy(modal_data.message);
-                Hide();
                 break;
             default:
                 break;
         }
+        Hide();
     }
     if (event.target == modal) {
         modal.style.display = "none";
