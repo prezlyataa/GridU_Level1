@@ -55,7 +55,7 @@ header, footer {
     border-radius: 5px;
 }
 
-.filter-popup__content {
+.filter-popup__content_top {
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #28a3a5;
@@ -151,6 +151,10 @@ header, footer {
     outline: none;
 }
 
+.filter-popup__content_bottom {
+    padding-top: 15px;
+}
+
 .footer-title {
     text-align: center;
 }
@@ -225,8 +229,9 @@ header, footer {
         left: 20px;
         width: calc(100% - 80px);
     }
-    .filter-popup__content {
+    .filter-popup__content_top {
         flex-direction: column;
+        border-bottom: none;
     }
     .available, .gender, .category {
         border-bottom: 1px solid #28a3a5;

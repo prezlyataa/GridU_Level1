@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Main</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 </head>
 <body>
 
@@ -32,37 +33,46 @@
                         <button id="filter-btn" class="btn" onclick="togglePopup()">Filter options</button>
                         <div id="filter-popup" class="filter-popup">
                             <div class="filter-popup__content">
-                                <div class="available">
-                                    <p>Availability:</p>
-                                    <label class="switch">
-                                        <input class="checkbox" type="checkbox">
-                                        <span class="slider round"></span>
-                                    </label>
-                                </div>
-                                <div class="gender">
-                                    <p>Gender:</p>
-                                    <div class="radio-button">
-                                        <label>
-                                            <input type="radio" name="gender">
-                                            Male
-                                        </label>
-                                        <label>
-                                            <input type="radio" name="gender">
-                                            Female
-                                        </label>
-                                        <label>
-                                            <input type="radio" name="gender">
-                                            Unisex
+                                <div class="filter-popup__content_top">
+                                    <div class="available">
+                                        <p>Availability:</p>
+                                        <label class="switch">
+                                            <input class="checkbox" type="checkbox">
+                                            <span class="slider round"></span>
                                         </label>
                                     </div>
+                                    <div class="gender">
+                                        <p>Gender:</p>
+                                        <div class="radio-button">
+                                            <label>
+                                                <input type="radio" name="gender">
+                                                Male
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="gender">
+                                                Female
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="gender">
+                                                Unisex
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="category">
+                                        <p>Category:</p>
+                                        <select class="select-option">
+                                            <option value="Clothes">Clothes</option>
+                                            <option value="Phones">Phones</option>
+                                            <option value="Tablets">Tablets</option>
+                                        </select>
+                                    </div>
                                 </div>
-                                <div class="category">
-                                    <p>Category:</p>
-                                    <select class="select-option">
-                                        <option value="Clothes">Clothes</option>
-                                        <option value="Phones">Phones</option>
-                                        <option value="Tablets">Tablets</option>
-                                    </select>
+                                <div class="filter-popup__content_bottom">
+                                    <p>
+                                        <label for="amount">Price range:</label>
+                                        <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                                    </p>
+                                    <div id="slider-range"></div>
                                 </div>
                             </div>
                         </div>
@@ -164,6 +174,8 @@
         </div>
     </footer>
 
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="./main.js"></script>
     <script src="https://use.fontawesome.com/255c2dfaed.js"></script>
 </body>
