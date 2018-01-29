@@ -1,4 +1,4 @@
-/*    Styles for Main layout   */
+/*    Styles for Manager layout   */
 
 * {
     margin: 0;
@@ -34,9 +34,11 @@ header, footer {
     background-color: #d3d3d3;
 }
 
-.footer-title {
+.footer-title {s
     text-align: center;
 }
+
+
 
 
 /*   Styles for manager page   */

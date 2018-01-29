@@ -1,4 +1,4 @@
-/*    Styles for Main layout   */
+/*    Styles for Product admin layout   */
 
 * {
     margin: 0;
@@ -37,6 +37,7 @@ header, footer {
 .footer-title {
     text-align: center;
 }
+
 
 
 
@@ -144,6 +145,9 @@ header, footer {
         padding: 15px 0;
     }
 }
+
+
+
 
 /*   Styles for pure Modal window   */
 

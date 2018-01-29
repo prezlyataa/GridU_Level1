@@ -34,6 +34,10 @@ header, footer {
     background-color: #d3d3d3;
 }
 
+
+
+/*   Styles for main content   */
+
 .content-header {
     display: flex;
     justify-content: flex-end;
@@ -132,8 +136,7 @@ header, footer {
     transform: translateX(26px);
 }
 
-/* Rounded sliders */
-.slider.round {
+.slider .round {
     border-radius: 20px;
 }
 

@@ -1,4 +1,4 @@
-/*    Styles for Main layout   */
+/*    Styles for Product customer layout   */
 
 * {
     margin: 0;
@@ -37,6 +37,9 @@ header, footer {
 .footer-title {
     text-align: center;
 }
+
+
+
 
 /*   Styles for current product  */
 
