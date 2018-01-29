@@ -68,6 +68,7 @@ header, footer {
 
 .product-img {
     width: 80%;
+    margin: 0 auto;
 }
 
 .product-info {
@@ -113,10 +114,20 @@ header, footer {
     text-align: center;
 }
 
+.modal-text {
+    padding: 10px;
+}
+
 .modal-edit {
     display: flex;
     justify-content: space-between;
-    padding-top: 10px;
+    padding: 20px;
+}
+
+.modal-edit-title {
+    background-color: #fff;
+    padding: 10px;
+    text-align: center;
 }
 
 .edit-left-part, .edit-right-part {
@@ -132,6 +143,11 @@ header, footer {
     padding: 5px;
     border-radius: 5px;
     margin: 5px 0;
+}
+
+.modal-delete-btn {
+    text-align: center;
+    padding: 10px 0;
 }
 
 @media only screen and (max-width: 900px) {
@@ -171,6 +187,10 @@ header, footer {
     border: 1px solid #888;
     width: 50%;
     padding: 20px;
+}
+
+.modal-edit-content {
+    padding: 0;
 }
 
 .close {

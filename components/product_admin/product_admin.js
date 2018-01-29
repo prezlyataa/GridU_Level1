@@ -42,9 +42,9 @@ Add = () => {
 };
 
 Edit = () => {
-    modal.innerHTML = `<div class="modal-content">
+    modal.innerHTML = `<div class="modal-content modal-edit-content">
         <span class="close">&times;</span>
-        <div class="modal-title">
+        <div class="modal-edit-title">
             <h3>Edit</h3>
         </div>
         <div class="modal-edit">
@@ -88,6 +88,10 @@ Edit = () => {
                     <input class="modal-edit-input" type="number">
                 </div>
             </div>
+        </div>
+        <div class="modal-delete-btn">
+            <button class="btn" onclick="modal.style.display = 'none';">Submit</button>
+            <button class="btn" onclick="modal.style.display = 'none'">Cancel</button>
         </div>`;
     Close();
 };
@@ -98,11 +102,13 @@ Delete = () => {
         <div class="modal-title">
             <h3>Are you sure?</h3>
         </div>
-        <div>
+        <div class="modal-text">
             <p>Are you sure that you want delete this item?</p>
         </div>
-        <button class="btn" onclick="modal.style.display = 'none';">Yes</button>
-        <button class="btn" onclick="modal.style.display = 'none'">No</button>`;
+        <div class="modal-delete-btn">
+            <button class="btn" onclick="modal.style.display = 'none';">Yes</button>
+            <button class="btn" onclick="modal.style.display = 'none'">No</button>
+        </div>`;
     Close();
 };
 

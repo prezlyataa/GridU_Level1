@@ -97,19 +97,10 @@ header, footer {
 
 .select-option {
     padding: 10px;
+    height: 30px;
     background-color: #28a3a5;
     width: 180px;
     color: #fff;
-}
-.arrow-down {
-    position: absolute;
-    top: 45px;
-    right: 13px;
-    border: solid #fff;
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    padding: 3px;
-    transform: rotate(45deg);
 }
 
 .show {
@@ -299,9 +290,6 @@ header, footer {
     .filter-popup__content_top {
         flex-direction: column;
         border-bottom: none;
-    }
-    .arrow-down {
-        display: none;
     }
     .available, .gender, .category {
         border-bottom: 1px solid #28a3a5;
