@@ -6,10 +6,18 @@
     border: 0;
 }
 
-header, footer {
-    background-color: #218688;
-    padding: 15px 0;
+body {
+    background: url("../img/bg.jpg");
+    font-family: "PT Sans", sans-serif;
 }
+
+header, footer {
+    background-color: #2A8676;
+    padding: 15px 0;
+    font-size: 15px;
+    color: #fff;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -31,8 +39,13 @@ header, footer {
 
 .content {
     min-height: 90vh;
-    background-color: #d3d3d3;
+    background-color: rgba(0,0,0,0.35);
 }
+
+.footer-title {
+    text-align: center;
+}
+
 
 
 
@@ -210,10 +223,6 @@ header, footer {
     background-color: #28a3a5;
 }
 
-.footer-title {
-    text-align: center;
-}
-
 
 
 /*   Styles for products   */
@@ -260,7 +269,7 @@ header, footer {
 
 .btn {
     padding: 10px 20px;
-    background-color: #28a3a5;
+    background: linear-gradient(180deg, #2BBCC2 0%, #1B745F 100%);
     border-radius: 5px;
     color: #fff;
 }
@@ -294,5 +303,8 @@ header, footer {
     .available, .gender, .category {
         border-bottom: 1px solid #28a3a5;
         padding: 15px;
+    }
+    .select-option {
+        height: auto;
     }
 }

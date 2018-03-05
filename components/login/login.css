@@ -6,12 +6,16 @@
     border: 0;
 }
 
+body {
+    background: url("../img/bg.jpg");
+    font-family: "PT Sans", sans-serif;
+}
+
 .login-page__content {
     display: flex;
     min-height: 100vh;
     justify-content: center;
     align-items: center;
-    background-color: #d3d3d3;
 }
 
 .modal-title {
@@ -48,7 +52,7 @@
 
 .btn {
     padding: 10px 20px;
-    background-color: #28a3a5;
+    background: linear-gradient(180deg, #2BBCC2 0%, #1B745F 100%);
     border-radius: 5px;
     color: #fff;
 }
