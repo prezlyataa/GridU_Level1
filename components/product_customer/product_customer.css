@@ -37,6 +37,10 @@ header, footer {
     margin-right: 10px;
 }
 
+.user .fa, .logo i {
+    font-size: 20px;
+}
+
 .content {
     min-height: 90vh;
     background-color: rgba(0,0,0,0.35);
@@ -56,6 +60,7 @@ header, footer {
     display: flex;
     justify-content: space-between;
     padding: 10px 20px 0;
+    color: #fff;
 }
 
 .products-list {
@@ -69,25 +74,49 @@ header, footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: #fff;
     padding: 15px;
     margin-bottom: 20px;
     border-radius: 3px;
+    background-color: #e9e7e6;
+}
+
+.product-header {
+    position: relative;
 }
 
 .product-img {
-    width: 80%;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.product-rate {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background: rgba(0,0,0,0.75);
+}
+
+.product-rate img {
+    height: 18px;
+    width: 18px;
+}
+
+.product-rate img:first-child {
+    padding-left: 20px;
 }
 
 .product-info {
+    padding: 0 15px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .product-name {
-    border-bottom: 2px solid #333;
+    font-size: 24px;
+    border-bottom: 2px solid #3FC5CB;
     margin: 15px 0;
+    padding-bottom: 15px;
 }
 
 .buy-item {
@@ -95,16 +124,28 @@ header, footer {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    padding: 10px;
+    padding: 15px 10px;
+    border-top: 1px solid #D6D6D6;
 }
 
 .item-price {
-    color: brown;
-    font-size: 20px;
+    color: #000;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.dollars {
+    color: #2A8676;
+}
+
+.choosen-items {
+    font-size: 16px;
+    font-weight: 400;
 }
 
 .btn {
-    padding: 10px 20px;
+    width: 120px;
+    height: 36px;
     background: linear-gradient(180deg, #2BBCC2 0%, #1B745F 100%);
     border-radius: 5px;
     color: #fff;
