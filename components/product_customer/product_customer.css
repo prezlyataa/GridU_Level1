@@ -74,6 +74,7 @@ header, footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    width: 100%;
     padding: 15px;
     margin-bottom: 20px;
     border-radius: 3px;
@@ -82,12 +83,83 @@ header, footer {
 
 .product-header {
     position: relative;
+    height: 350px;
+    width: 100%;
 }
 
 .product-img {
     width: 100%;
     margin: 0 auto;
 }
+
+
+
+.arrow {
+    cursor: pointer;
+    position: absolute;
+    top: 60%;
+    margin-top: -50px;
+}
+
+.arrow:hover {
+    cursor: pointer;
+}
+
+#left-arrow {
+    left: 0;
+    margin-left: 25px;
+    color: transparent;
+}
+
+#left-arrow img {
+    height: 40px;
+}
+
+#right-arrow {
+    right: 0;
+    margin-right: 25px;
+    color: transparent;
+}
+
+#right-arrow img {
+    height: 40px;
+    transform: scaleX(-1);
+}
+
+#slider {
+    height: 100%;
+}
+
+.image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.img-text {
+    font-size: 14px;
+    font-style: italic;
+    color: #fff;
+    padding: 10px 40px 40px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+}
+
+.vertical-align-wrapper {
+    display: table;
+    overflow: hidden;
+    align-self: flex-end;
+}
+
+.image-one { background-image: url("../img/1.jpg"); }
+
+.image-two { background-image: url("../img/2.jpg"); }
+
+.image-three { background-image: url("../img/3.jpg"); }
+
 
 .product-rate {
     width: 100%;
@@ -106,6 +178,7 @@ header, footer {
 }
 
 .product-info {
+    width: 100%;
     padding: 0 15px;
     display: flex;
     flex-direction: column;
@@ -163,7 +236,20 @@ header, footer {
     .product {
         flex-direction: column;
     }
+    .product-info {
+        padding: 0;
+    }
     .product-img {
         margin: 0 auto;
     }
 }
+
+
+
+
+
+
+
+
+
+
