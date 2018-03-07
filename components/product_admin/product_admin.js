@@ -113,7 +113,7 @@ Delete = () => {
 };
 
 window.onclick = function (e) {
-    if(e.target.nodeName="BUTTON"
+    if(e.target.nodeName="SPAN"
             && e.target.classList.contains('buy')
             || e.target.classList.contains('add')
             || e.target.classList.contains('edit')
