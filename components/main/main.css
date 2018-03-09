@@ -274,7 +274,7 @@ header, footer {
 
 .product-desc {
     padding: 15px;
-    background-color: #e9e7e6;
+    background: url("../img/modal-bg.png") repeat;
 }
 
 .product-name {

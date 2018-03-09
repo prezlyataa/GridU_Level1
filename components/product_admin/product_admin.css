@@ -74,7 +74,7 @@ header, footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: #e9e7e6;
+    background: url("../img/modal-bg.png") repeat;
     padding: 15px;
     margin-bottom: 20px;
     border-radius: 3px;

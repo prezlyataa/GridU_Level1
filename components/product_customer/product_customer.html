@@ -38,7 +38,7 @@
                             <img src="../img/arrow.svg" alt="arrow">
                         </div>
                         <div id="slider">
-                            <div class="image image-one">
+                            <div class="image image-one myimage">
                                 <div class="vertical-align-wrapper">
                                     <p class="img-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi cumque esse
                                         Excepturi inventore iste magni, praesentium quo sed vero voluptas!
@@ -52,7 +52,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="image image-two">
+                            <div class="image image-two myimage">
                                 <div class="vertical-align-wrapper">
                                     <p class="img-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi cumque esse
                                         Excepturi inventore iste magni, praesentium quo sed vero voluptas!
@@ -66,7 +66,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="image image-three">
+                            <div class="image image-three myimage">
                                 <div class="vertical-align-wrapper">
                                     <p class="img-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi cumque esse
                                         Excepturi inventore iste magni, praesentium quo sed vero voluptas!
@@ -100,11 +100,73 @@
                 </div>
             </div>
 
-
-            <div class="img-zoom-container">
-                <img id="myimage" src="../img/1.jpg" width="525" height="350">
-                <div id="myresult" class="img-zoom-result"></div>
+            <div class="share">
+                <p class="share-title">There is no user reviews for now.</p>
+                <p id="share-link" class="share-link">Share your thoughts with other customers:</p>
             </div>
+
+            <div id="review" class="review">
+                <h3 class="review-title">Add review</h3>
+                <div class="review-info">
+                    <div class="review-info-header">
+                        <p class="review-info-header-name">By <span id="your-name">Your Name</span> March 4, 2018</p>
+                    </div>
+                    <div class="review-desc">
+                        <div class="review-desc-img">
+                            <img id='avatar'/>
+                        </div>
+                        <div class="review-desc-text">
+                            <p><pre id="startTypeField" class="review-desc-text-feedback">Start typing and your review text will appear here...</pre></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-edit">
+                    <div class="review-edit-lpart">
+                        <div class="review-edit-lpart-name">
+                            <p>Enter your name:</p>
+                            <input id="namefield" class="input-name" type="text">
+                        </div>
+                        <div class="review-edit-lpart-avatar">
+                            <p>Choose your avatar:</p>
+                            <div class="avatar-field">
+                                <i class="fa fa-upload" aria-hidden="true"></i>
+                                <input class="input-file" type="file" name="pic" accept="image/*" onchange="onFileSelected(event)" >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-edit-rpart">
+                        <div class="review-edit-rpart-header">
+                            <p>Write your review:</p>
+                            <p>Rate product:
+                                <img class="rate-icon" src="../img/star-inactive.svg" alt="rate-icon">
+                                <img class="rate-icon" src="../img/star-inactive.svg" alt="rate-icon">
+                                <img class="rate-icon" src="../img/star-inactive.svg" alt="rate-icon">
+                                <img class="rate-icon" src="../img/star-inactive.svg" alt="rate-icon">
+                                <img class="rate-icon" src="../img/star-inactive.svg" alt="rate-icon">
+                            </p>
+                        </div>
+                        <div class="review-edit-rpart-area">
+                            <p contenteditable="true" id="areatext" class="review-area"></p>
+                        </div>
+                        <div class="review-edit-rpart-btns">
+                            <div class="left-btns">
+                                <button id="btn-bold" class="edit-btn">Bold</button>
+                                <button id="btn-emphasize" class="edit-btn">Emphasize</button>
+                                <button id="btn-quote" class="edit-btn">Quote</button>
+                            </div>
+                            <div class="right-btns">
+                                <button class="edit-btn" id="cancel-btn">Cancel</button>
+                                <button class="edit-btn apply-review-btn">Apply review</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--<div class="img-zoom-container">-->
+                <!--<img id="myimage" src="../img/1.jpg" width="525" height="350">-->
+                <!--<div id="myresult" class="img-zoom-result"></div>-->
+            <!--</div>-->
 
         </div>
     </div>

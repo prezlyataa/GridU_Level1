@@ -78,7 +78,7 @@ header, footer {
     padding: 15px;
     margin-bottom: 20px;
     border-radius: 3px;
-    background-color: #e9e7e6;
+    background: url("../img/modal-bg.png") repeat;
 }
 
 .product-header {
@@ -233,6 +233,206 @@ header, footer {
     cursor: pointer;
 }
 
+
+
+
+.share {
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px 0;
+}
+
+.share-link {
+    color: #fecb2f;
+    text-decoration: underline;
+}
+
+.share-link:hover {
+    cursor: pointer;
+}
+
+.review {
+    padding: 10px 20px 100px;
+    display: block;
+}
+
+.review-info {
+    background-color: rgba(0,0,0,0.7);
+    padding: 15px;
+    color: #fff;
+}
+
+
+.review-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.review-info-header {
+    font-size: 14px;
+}
+
+.rate-icon {
+    width: 18px;
+    height: 18px;
+}
+
+#your-name {
+    color: #fecb2f;
+    font-style: italic;
+}
+
+.review-desc {
+    display: flex;
+    padding-top: 15px;
+}
+
+.review-desc-img {
+    box-sizing: border-box;
+    height: 79px;
+    width: 79px;
+    border: 1px solid #FFCC00;
+    background: url("../img/modal-bg.png");
+    margin-right: 17px;
+}
+
+.review-desc-text-feedback {
+    font-style: italic;
+    opacity: 0.5;
+    color: #fff;
+}
+
+.review-edit {
+    padding: 30px;
+    background: url("../img/modal-bg.png");
+    display: flex;
+    font-size: 16px;
+}
+
+.review-edit-lpart {
+    margin-right: 20px;
+}
+
+.review-edit-lpart-name {
+    margin-bottom: 20px;
+}
+
+.review-edit-lpart-name p, .review-edit-lpart-avatar p {
+    padding-bottom: 5px;
+}
+
+.input-name {
+    height: 35px;
+    width: 235px;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.input-name:focus {
+    outline: none;
+}
+
+.avatar-field {
+    display: table-cell;
+    vertical-align: middle;
+    height: 100px;
+    width: 235px;
+    border-radius: 15px;
+    background-color: #FFFFFF;
+    text-align: center;
+    position: relative;
+}
+
+#avatar {
+    width: 79px;
+    height: 79px;
+}
+
+.avatar-field i {
+    font-size: 30px;
+    display: block;
+}
+
+.input-file {
+    display: block;
+    position: absolute;
+    left: 15%;
+}
+
+.review-edit {
+    border: 3px solid #3FC5CB;
+}
+
+.review-edit-rpart {
+    width: 100%;
+}
+
+.review-edit-rpart-header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5px;
+}
+
+.review-area {
+    width: 100%;
+    min-height: 178px;
+    padding: 5px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.review-area:focus {
+    outline: none;
+}
+
+.review-edit-rpart-btns {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5px;
+}
+
+.right-btns button {
+    width: 120px;
+}
+
+.edit-btn {
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    background: linear-gradient(180deg, #B1B1B1 0%, #777777 100%);
+}
+
+.edit-btn:hover {
+    cursor: pointer;
+}
+
+.apply-review-btn {
+    background: linear-gradient(180deg, #2BBCC2 0%, #1B745F 100%);
+}
+
+.edit-btn:focus {
+    outline: none;
+}
+
+/*.img-zoom-lens {*/
+    /*position: absolute;*/
+    /*border: 1px solid #d4d4d4;*/
+    /*!*set the size of the lens:*!*/
+    /*width: 40px;*/
+    /*height: 40px;*/
+/*}*/
+/*.img-zoom-result {*/
+    /*border: 1px solid #d4d4d4;*/
+    /*!*set the size of the result div:*!*/
+    /*width: 300px;*/
+    /*height: 300px;*/
+/*}*/
+
 @media only screen and (max-width: 900px) {
     .product {
         flex-direction: column;
@@ -245,27 +445,22 @@ header, footer {
     .product-img {
         margin: 0 auto;
     }
+
+    .share {
+        padding-bottom: 20px;
+    }
+
+    .review-edit {
+        flex-direction: column;
+    }
+
+    .review-edit-rpart-header {
+        padding-top: 15px;
+    }
+
+    .right-btns button {
+        width: auto;
+    }
 }
-
-
-
-
-
-
-.img-zoom-lens {
-    position: absolute;
-    border: 1px solid #d4d4d4;
-    /*set the size of the lens:*/
-    width: 40px;
-    height: 40px;
-}
-.img-zoom-result {
-    border: 1px solid #d4d4d4;
-    /*set the size of the result div:*/
-    width: 300px;
-    height: 300px;
-}
-
-
 
 
