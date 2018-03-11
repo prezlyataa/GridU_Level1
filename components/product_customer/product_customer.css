@@ -74,6 +74,7 @@ header, footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    position: relative;
     width: 100%;
     padding: 15px;
     margin-bottom: 20px;
@@ -83,7 +84,6 @@ header, footer {
 
 .product-header {
     position: relative;
-    height: 350px;
     width: 100%;
 }
 
@@ -149,16 +149,8 @@ header, footer {
     align-self: flex-end;
 }
 
-.image-one {
-    background-image: url("../img/1.jpg");
-}
-
-.image-two {
-    background-image: url("../img/2.jpg");
-}
-
-.image-three {
-    background-image: url("../img/3.jpg");
+.slider-image {
+    width: 100%;
 }
 
 
@@ -373,6 +365,7 @@ input[type="file"] {
     display: inline-block;
     padding: 6px 12px;
     cursor: pointer;
+    font-size: 14px;
     border-radius: 5px;
     color: #fff;
     background: linear-gradient(180deg, #2BBCC2 0%, #1B745F 100%);
@@ -433,20 +426,6 @@ input[type="file"] {
 .edit-btn:focus {
     outline: none;
 }
-
-/*.img-zoom-lens {*/
-    /*position: absolute;*/
-    /*border: 1px solid #d4d4d4;*/
-    /*!*set the size of the lens:*!*/
-    /*width: 40px;*/
-    /*height: 40px;*/
-/*}*/
-/*.img-zoom-result {*/
-    /*border: 1px solid #d4d4d4;*/
-    /*!*set the size of the result div:*!*/
-    /*width: 300px;*/
-    /*height: 300px;*/
-/*}*/
 
 @media only screen and (max-width: 900px) {
     .product {
@@ -510,3 +489,22 @@ input[type="file"] {
 .rate > input:checked + label:hover, .rate > input:checked + label:hover ~ label, .rate > input:checked ~ label:hover, .rate > input:checked ~ label:hover ~ label, .rate > label:hover ~ input:checked ~ label { color: #c59b08; }
 
 
+.img-zoom-container {
+    position: absolute;
+    left: 50%;
+    visibility: hidden;
+}
+
+.img-zoom-lens {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    /*set the size of the lens:*/
+    width: 40px;
+    height: 40px;
+}
+.img-zoom-result {
+    border: 1px solid #d4d4d4;
+    /*set the size of the result div:*/
+    width: 250px;
+    height: 250px;
+}
