@@ -262,8 +262,8 @@ function imageZoom(imgID, resultID) {
 }
 
 imageZoom('slider-image-1', 'zoom-result');
-imageZoom('slider-image-2', 'zoom-result');
-imageZoom('slider-image-3', 'zoom-result');
+// imageZoom('slider-image-2', 'zoom-result');
+// imageZoom('slider-image-3', 'zoom-result');
 
 slider.onmouseover = function () {
     zoomResult.style.visibility = 'visible';
