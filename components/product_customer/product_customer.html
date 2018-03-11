@@ -142,7 +142,10 @@
                             <p>Choose your avatar:</p>
                             <div class="avatar-field">
                                 <i class="fa fa-upload" aria-hidden="true"></i>
-                                <input class="input-file" type="file" name="pic" accept="image/*" onchange="onFileSelected(event)" >
+                                <label for="file-upload" class="custom-file-upload">
+                                    Upload image
+                                </label>
+                                <input id="file-upload" type="file" accept="image/*" onchange="onFileSelected(event)"/>
                             </div>
                         </div>
                     </div>
