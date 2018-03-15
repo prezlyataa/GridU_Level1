@@ -24,6 +24,12 @@ body {
     padding: 10px 0;
 }
 
+.form-inputs {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0 20px;
+}
+
 .form {
     display: flex;
     flex-direction: column;
@@ -33,27 +39,48 @@ body {
 
 .form-input {
     width: 50%;
+    height: 20px;
     padding: 10px 10px;
     border-radius: 5px;
     margin: 5px;
 }
 
-.form-input:focus {
-    outline: none;
+.login::placeholder {
+    background: url("../img/login-active.svg") no-repeat;
+    background-position: right;
+    height: 20px;
 }
 
-.form-input:invalid {
+.password::placeholder {
+    background: url("../img/password-active.svg") no-repeat;
+    background-position: right;
+    height: 22px;
+}
+
+.form-input:default {
+    border: 2px solid #fff;
+}
+
+.form-input:focus:invalid {
     border: 2px solid red;
 }
 
 .form-input:valid {
-    border: 2px solid #333;
+    border: 2px solid #fff;
 }
 
+.form-input:focus {
+    border: 2px solid #9CC3BC;
+    outline: none;
+}
+
+
 .btn {
-    padding: 10px 20px;
-    background: linear-gradient(180deg, #2BBCC2 0%, #1B745F 100%);
+    font-size: 18px;
+    height: 50px;
+    width: 170px;
     border-radius: 5px;
+    background: linear-gradient(180deg, #2BBCC2 0%, #1B745F 100%);
     color: #fff;
 }
 
@@ -81,11 +108,21 @@ body {
 }
 
 .modal-content {
-    position: relative;
+    position: fixed;
     background-color: #E8E8E8;
     margin: 15% auto;
     border: 1px solid #888;
     width: 50%;
+    top: 10%;
+    left: 25%;
+}
+
+.modal-title h5 {
+    font-size: 20px;
+}
+
+.register-form {
+    background: url("../img/modal-bg.png");
 }
 
 .close {
@@ -106,10 +143,10 @@ body {
 
 @media only screen and (max-width: 1000px) {
     .form-input {
-        width: 70%;
+        width: 80%;
     }
     .modal-content {
-        width: 80%;
+        top: 20%;
     }
 }
 
