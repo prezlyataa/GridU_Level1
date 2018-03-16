@@ -151,6 +151,7 @@ header, footer {
 
 .slider-image {
     width: 100%;
+    background: url("../img/watermark.png") no-repeat;
 }
 
 
