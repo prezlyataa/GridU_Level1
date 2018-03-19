@@ -1,11 +1,10 @@
 /*** Slider function  ***/
 
-
-(function () {
+function SliderToggle() {
     let sliderImages = document.querySelectorAll('.image'),
-    arrowLeft = document.querySelector('#left-arrow'),
-    arrowRight = document.querySelector('#right-arrow'),
-    currentImg = 0;
+        arrowLeft = document.querySelector('#left-arrow'),
+        arrowRight = document.querySelector('#right-arrow'),
+        currentImg = 0;
 
     function initSlider() {
         resetSlider();
@@ -48,7 +47,10 @@
     });
 
     initSlider();
-})();
+}
+
+SliderToggle();
+
 
 
 
@@ -169,8 +171,41 @@ function surroundSelectionEmphasize() {
 
 function surroundSelectionQuote() {
     const span = document.createElement("span");
-    span.style.quotes = '\'"\' \'"\' "\'" "\'"';
-    span.style.fontSize = '24px';
+    span.classList.add('quote-span');
+    const sheet = window.document.styleSheets[0];
+
+    sheet.insertRule(`.quote-span { 
+      font-size: 24px;
+        margin: 0 auto;
+        quotes: "\\201C""\\201D""\\2018""\\2019";
+        padding: 10px 20px;
+        line-height: 1.4;
+     }`);
+
+    sheet.insertRule(`.quote-span:before { 
+      content: open-quote;
+      display: inline;
+      height: 0;
+      line-height: 0;
+      left: -10px;
+      position: relative;
+      top: 30px;
+      color: #ccc;
+      font-size: 3em;
+     }`);
+
+
+    sheet.insertRule(`.quote-span::after { 
+      content: close-quote;
+      display: inline;
+      height: 0;
+      line-height: 0;
+      left: 10px;
+      position: relative;
+      top: 35px;
+      color: #ccc;
+      font-size: 3em;
+     }`);
 
     if (window.getSelection) {
         let sel = window.getSelection();
@@ -200,13 +235,14 @@ btnEmphasize.onclick = function() {
 
 
 
+
 /*** Zoom function ***/
 
 const zoomResult = document.getElementById('img-zoom-container');
 const slider = document.getElementById('slider');
 
 function imageZoom(imgID, resultID) {
-    var img, lens, result, cx, cy;
+    let img, lens, result, cx, cy;
     img = document.getElementById(imgID);
     result = document.getElementById(resultID);
     /*create lens:*/
@@ -227,7 +263,7 @@ function imageZoom(imgID, resultID) {
     lens.addEventListener("touchmove", moveLens);
     img.addEventListener("touchmove", moveLens);
     function moveLens(e) {
-        var pos, x, y;
+        let pos, x, y;
         /*prevent any other actions that may occur when moving over the image:*/
         e.preventDefault();
         /*get the cursor's x and y positions:*/
@@ -247,7 +283,7 @@ function imageZoom(imgID, resultID) {
         result.style.backgroundPosition = "-" + (x * cx) + "px -" + (y * cy) + "px";
     }
     function getCursorPos(e) {
-        var a, x = 0, y = 0;
+        let a, x = 0, y = 0;
         e = e || window.event;
         /*get the x and y positions of the image:*/
         a = img.getBoundingClientRect();
@@ -279,14 +315,14 @@ slider.onmouseout = function () {
 
 function watermarkImage(elemImage, text) {
     // Create test image to get proper dimensions of the image.
-    var testImage = new Image();
+    let testImage = new Image();
     testImage.onload = function() {
-        var h = testImage.height, w = testImage.width, img = new Image();
+        let h = testImage.height, w = testImage.width, img = new Image();
         // Once the image with the SVG of the watermark is loaded...
         img.onload = function() {
             // Make canvas with image and watermark
-            var canvas = Object.assign(document.createElement('canvas'), {width: w, height: h});
-            var ctx = canvas.getContext('2d');
+            let canvas = Object.assign(document.createElement('canvas'), {width: w, height: h});
+            let ctx = canvas.getContext('2d');
             ctx.drawImage(testImage, 0, 0);
             ctx.drawImage(img, 0, 0);
             // If PNG can't be retrieved show the error in the console
@@ -303,13 +339,13 @@ function watermarkImage(elemImage, text) {
             '<foreignObject width="100%" height="100%">' +
             '<div xmlns="http://www.w3.org/1999/xhtml">' +
             '<div style="position: absolute;' +
-            'right: 0;' +
-            'bottom: 0;' +
+            'right: 20px;' +
+            'top: 20px;' +
             'font-family: BlinkMacSystemFont, -apple-system, Segoe UI, Verdana, sans-serif' +
-            'font-size: 14px;' +
-            'letter-spacing: 1px;' +
-            'background: #000;' +
-            'color: #fff;' +
+            'font-size: 62px;' +
+            'letter-spacing: 2px;' +
+            'background: transparent;' +
+            'color: #000;' +
             'padding: 0.25em .5em;' +
             'border-radius: 0.25em;' +
             'opacity: 0.6;' +
@@ -326,5 +362,5 @@ function watermarkImage(elemImage, text) {
 const elImg = document.querySelectorAll( '.slider-image' );
 
 for ( let i = 0, len = elImg.length; i < len; i++ ) {
-    watermarkImage(elImg[i], 'Watermark Text');
+    watermarkImage(elImg[i], 'Demo Shop');
 }
