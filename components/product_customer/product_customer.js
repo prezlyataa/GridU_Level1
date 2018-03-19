@@ -187,24 +187,23 @@ function surroundSelectionQuote() {
       display: inline;
       height: 0;
       line-height: 0;
-      left: -10px;
+      left: -5px;
       position: relative;
-      top: 30px;
-      color: #ccc;
-      font-size: 3em;
+      top: 10px;
+      color: #fecb2f;
+      font-size: 2em;
      }`);
-
 
     sheet.insertRule(`.quote-span::after { 
       content: close-quote;
       display: inline;
       height: 0;
       line-height: 0;
-      left: 10px;
+      left: 5px;
       position: relative;
-      top: 35px;
-      color: #ccc;
-      font-size: 3em;
+      top: 10px;
+      color: #fecb2f;
+      font-size: 2em;
      }`);
 
     if (window.getSelection) {
@@ -297,6 +296,8 @@ function imageZoom(imgID, resultID) {
     }
 }
 
+// imageZoom('slider-image', 'zoom-result');
+
 imageZoom('slider-image-1', 'zoom-result');
 // imageZoom('slider-image-2', 'zoom-result');
 // imageZoom('slider-image-3', 'zoom-result');
@@ -361,6 +362,6 @@ function watermarkImage(elemImage, text) {
 
 const elImg = document.querySelectorAll( '.slider-image' );
 
-for ( let i = 0, len = elImg.length; i < len; i++ ) {
+for (let i = 0, len = elImg.length; i < len; i++) {
     watermarkImage(elImg[i], 'Demo Shop');
 }
