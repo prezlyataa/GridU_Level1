@@ -45,15 +45,20 @@
                                         <p>Gender:</p>
                                         <div class="radio-button">
                                             <label class="radio-button-wrapper">
-                                                <input class="radio-button-circle" type="radio" name="gender">
+                                                <input id="1" type="checkbox" checked="checked" name="check" onclick="selectOnlyThis(this.id)">
+                                                <span class="checkmark"></span>
                                                 Male
                                             </label>
+
                                             <label class="radio-button-wrapper">
-                                                <input class="radio-button-circle" type="radio" name="gender">
+                                                <input id="2" type="checkbox" name="check" onclick="selectOnlyThis(this.id)">
+                                                <span class="checkmark"></span>
                                                 Female
                                             </label>
+
                                             <label class="radio-button-wrapper">
-                                                <input class="radio-button-circle" type="radio" name="gender">
+                                                <input id="3" type="checkbox" name="check" onclick="selectOnlyThis(this.id)">
+                                                <span class="checkmark"></span>
                                                 Unisex
                                             </label>
                                         </div>
