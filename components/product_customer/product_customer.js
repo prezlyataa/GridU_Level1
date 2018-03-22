@@ -306,6 +306,7 @@ slider.onmouseout = function () {
 
 
 function mouseTarget() {
+
     document.onmouseover = function(e) {
         switch(e.target.id) {
             case 'slider-image-1':
@@ -319,6 +320,9 @@ function mouseTarget() {
                 break;
         }
     };
+    let loop = document.getElementsByClassName('vertical-align-wrapper');
+    let loop_zoom = document.getElementsByClassName('img-zoom-lens');
+    loop.removeChild(loop_zoom);
 }
 
 mouseTarget();
