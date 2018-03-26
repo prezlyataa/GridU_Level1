@@ -456,11 +456,6 @@ mouseTarget();
             return canvas.toDataURL();
         },
 
-        /**
-         * Chuyển ảnh sang dạng base64
-         * @param   {Object}  data     Các thông số thiết lập để phân biệt loại ảnh và với watermark
-         * @param   {String}  callback URL ảnh dạng base64
-         */
         imgurltodata: function (data, callback) {
 
             var _this = this,
@@ -496,7 +491,6 @@ mouseTarget();
 
                 }
 
-                // Xoay dọc watermark sử dụng text, khi ở vị trí giữa mép dọc
                 if ((set.gravity === 'w' || set.gravity === 'e') && !data.wmObj) {
                     canvas.width = h;
                     canvas.height = w;
@@ -508,7 +502,6 @@ mouseTarget();
                     ctxH = 0;
                 }
 
-                // Tô nền trắng cho ảnh xuất ra dạng jpeg
                 if (data.type === 'jpeg') {
                     ctx.fillStyle = '#ffffff';
                     ctx.fillRect(0, 0, w, h);
@@ -516,58 +509,54 @@ mouseTarget();
 
                 ctx.drawImage(this, 0, ctxH, w, h);
 
-                // Xử lý watermark được chèn vào
                 if (data.wmObj) {
 
-                    // Độ trong suốt
                     var op = set.opacity;
                     if (op > 0 && op < 1) {
                         ctx.globalAlpha = set.opacity;
                     }
 
-                    // Vị trí chèn, gọi theo hướng trên bản đồ
                     var wmW = set.fullOverlay ? w : data.wmObj.width,
                         wmH = set.fullOverlay ? h : data.wmObj.height,
                         pos = set.margin,
                         gLeft, gTop;
 
                     switch (set.gravity) { // nw | n | ne | w | e | sw | s | se
-                        case 'nw': // Tây bắc
+                        case 'nw':
                             gLeft = pos;
                             gTop = pos;
                             break;
-                        case 'n': // Bắc
+                        case 'n':
                             gLeft = w / 2 - wmW / 2;
                             gTop = pos;
                             break;
-                        case 'ne': // Đông Bắc
+                        case 'ne':
                             gLeft = w - wmW - pos;
                             gTop = pos;
                             break;
-                        case 'w': // Tây
+                        case 'w':
                             gLeft = pos;
                             gTop = h / 2 - wmH / 2;
                             break;
-                        case 'e': // Đông
+                        case 'e':
                             gLeft = w - wmW - pos;
                             gTop = h / 2 - wmH / 2;
                             break;
-                        case 'sw': // Tây Nam
+                        case 'sw':
                             gLeft = pos;
                             gTop = h - wmH - pos;
                             break;
-                        case 's': // Nam
+                        case 's':
                             gLeft = w / 2 - wmW / 2;
                             gTop = h - wmH - pos;
                             break;
-                        default: // Đông Nam
+                        default:
                             gLeft = w - wmW - pos;
                             gTop = h - wmH - pos;
                     }
                     ctx.drawImage(data.wmObj, gLeft, gTop, wmW, wmH);
                 }
 
-                // Xuất ra url ảnh dạng base64
                 var dataURL = canvas.toDataURL('image/' + data.type);
 
                 if (typeof callback === 'function') {
@@ -585,7 +574,6 @@ mouseTarget();
                 canvas = null;
             };
 
-            // Xử lý ảnh tải lỗi hoặc có thể do từ chối CORS headers
             img.onerror = function () {
                 set.fail.call(this, this.src);
                 set.always.call(ele, this.src);
